@@ -11,11 +11,9 @@ public class SortingApp {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		int[] array = { 2, 5, 6, 8, 9, 10 };
-		
-		InsertionSort insert = new InsertionSort();
-		
-		insert.sort(array);
+		int[] array = { 2, 1, 3, 6, 8, 9, 10, 0 };
+				
+		BubbleSort.sort(array);
 		
 		System.out.println(Arrays.toString(array));
 		

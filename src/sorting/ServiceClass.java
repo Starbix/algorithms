@@ -40,5 +40,32 @@ public class ServiceClass {
 		return true;
 	}
 	
+	public static void swap(int[] arr, int i, int j) {
+		int temp = arr[i];
+		arr[i] = arr[j];
+		arr[j] = temp;
+	}
+	
+	//inclusive l and r
+	public static int getMaxIndex(int[] arr, int l, int r) {
+		int max = Integer.MIN_VALUE;
+		int index = 0;
+		
+		for (int i=l;i<=r;i++) {
+			if (max<arr[i]) {
+				max=arr[i];
+				index=i;
+			}
+		}
+		
+		return index;
+	}
+	
+	public static int getMaxIndex(int[] arr) {
+		return getMaxIndex(arr, 0, arr.length-1);
+	}
+	
+	
+	
 
 }
