@@ -3,4 +3,5 @@
 ## Sorting
 
 - Insertion
-- ...
+- Selection
+- Bubble
