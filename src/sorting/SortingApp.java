@@ -13,7 +13,7 @@ public class SortingApp {
 
 		int[] array = { 2, 1, 3, 6, 8, 9, 10, 0 };
 				
-		HeapSort.sort(array);
+		MergeSort.sort(array);
 		
 		System.out.println(Arrays.toString(array));
 		
