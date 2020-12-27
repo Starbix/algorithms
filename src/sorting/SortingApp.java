@@ -13,12 +13,12 @@ public class SortingApp {
 
 		int[] array = { 2, 1, 3, 6, 8, 9, 10, 0 };
 				
-		MergeSort.sort(array);
+		QuickSort.sort(array);
 		
 		System.out.println(Arrays.toString(array));
 		
 		
-		System.out.println(ServiceClass.binarySearch(array, 0));
+		System.out.println(ServiceClass.binarySearch(array, 8));
 		
 		
 		

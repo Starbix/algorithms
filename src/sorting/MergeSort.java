@@ -42,7 +42,6 @@ public class MergeSort implements Sortable {
 		}
 		
 		// copy the remaining elements
-		
 		while (i<=m) {
 			b[k++] = arr[i++];
 		}
