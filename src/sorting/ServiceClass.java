@@ -1,10 +1,6 @@
 package sorting;
 
 public class ServiceClass {
-
-	public ServiceClass() {
-		// TODO Auto-generated constructor stub
-	}
 	
 	
 	//if b is not in arr, return where it would be
