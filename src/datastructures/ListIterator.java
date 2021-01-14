@@ -20,7 +20,6 @@ public class ListIterator<T> implements Iterator<T> {
 
 	@Override
 	public T next() {
-		// TODO Auto-generated method stub
 		Node<T> tmp = node;
 		
 		node = node.getNext();
