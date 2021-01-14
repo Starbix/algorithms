@@ -23,3 +23,5 @@
 ## Abstract Datastructures
 
 - Doubly Linked List
+- Queue
+- Stack

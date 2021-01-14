@@ -7,7 +7,8 @@ import java.util.NoSuchElementException;
 import java.util.Random;
 import org.junit.rules.Timeout;
 
-import datastructures.*;
+import datastructures.DoublyLinkedList;
+import datastructures.Node;
 
 import org.junit.Rule;
 import org.junit.Test;
