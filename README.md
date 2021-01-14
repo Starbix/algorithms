@@ -1,4 +1,4 @@
-# Algorithms
+# Algorithms and Datastructures
 
 ## Sorting
 
@@ -20,3 +20,6 @@
   - O(n*log(n)) average case
   - O(n²) worst-case
 
+## Abstract Datastructures
+
+- Doubly Linked List

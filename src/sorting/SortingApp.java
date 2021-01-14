@@ -9,11 +9,12 @@ public class SortingApp {
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
-		int[] array = { 2, 1, 3, 6, 8, 9, 10, 0 };
-				
-		QuickSort.sort(array);
+		//int[] array = { 2, 1, 3, 6, 8, 9, 10, 0 };
+		
+		int[] array = { 3, 7, 5, 1, 4 };
+		
+		HeapSort.sort(array);
 		
 		System.out.println(Arrays.toString(array));
 		
