@@ -21,7 +21,7 @@ public class UnionFindTest {
 		assertTrue(u.same(3,4));
 		assertFalse(u.same(3,5));
 		u.union(3,6);
-		
+
 		assertEquals(u.find(3), u.find(6));
 		assertEquals(u.find(4), u.find(6));
 		assertEquals(u.find(5), u.find(6));
@@ -38,8 +38,8 @@ public class UnionFindTest {
 		assertTrue(u.same(3,4));
 		assertFalse(u.same(3,5));
 		u.union(3,6);
-		
-		
+
+
 		assertEquals(u.find(3), u.find(6));
 		assertEquals(u.find(4), u.find(6));
 		assertEquals(u.find(5), u.find(6));

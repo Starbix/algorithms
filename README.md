@@ -1,24 +1,32 @@
 # Algorithms and Datastructures
 
-## Sorting
+## Algorithms
 
-- Insertion
+### Sorting
+
+- InsertionSort
   - O(n*log(n)) comparisons
   - O(n²) swaps
-- Selection
+- SelectionSort
   - O(n²) comparisons
   - O(n) swaps
-- Bubble
+- BubbleSort
   - O(n²) comparisons
   - O(n²) swaps
-- Heap
+- HeapSort
   - O(n*log(n))
-- Merge
+- MergeSort
   - O(n*log(n)) comparisons
   - O(n*log(n)) swaps
-- Quick
+- QuickSort
   - O(n*log(n)) average case
   - O(n²) worst-case
+
+### Graph Algorithms
+
+- Minimal Spanning Tree
+  - Kruskal
+- Shortest Path
 
 ## Abstract Datastructures
 

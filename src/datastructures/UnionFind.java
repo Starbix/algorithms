@@ -2,11 +2,12 @@ package datastructures;
 
 public class UnionFind {
 
-
 	int[] rank;
 	int[] rep;
 
 	int n;
+	
+	int components;
 
 	//FAST: same and union in O(logN)
 	//not FAST: same in O(1) and union in O(n) 
@@ -15,12 +16,14 @@ public class UnionFind {
 	public UnionFind(int n) {
 		this.FAST = true;
 		this.n = n;
+		this.components = n;
 		make(n);
 	}
 
 	public UnionFind(int n, boolean fast) {
 		this.FAST = fast;
 		this.n = n;
+		this.components = n;
 		make(n);
 	}
 
@@ -56,6 +59,8 @@ public class UnionFind {
 			int uRoot = find(u);
 			int vRoot = find(v);
 
+			if (uRoot!=vRoot) components--;
+			
 			if (rank[uRoot]<rank[vRoot]) {
 				rep[uRoot] = vRoot;
 			} else if (rank[uRoot]>rank[vRoot]) {
@@ -66,6 +71,8 @@ public class UnionFind {
 			}
 		} else {
 
+			if (rep[u]!=rep[v]) components--;
+			
 			int r = rep[u];
 			for (int i=0;i<n;i++) {
 				if (rep[i]==r) {
@@ -73,8 +80,7 @@ public class UnionFind {
 				}
 			}
 		}
+		
+		
 	}
-
-
-
 }
