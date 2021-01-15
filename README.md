@@ -25,3 +25,4 @@
 - Doubly Linked List
 - Queue
 - Stack
+- UnionFind

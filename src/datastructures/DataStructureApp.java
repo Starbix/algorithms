@@ -8,32 +8,29 @@ public class DataStructureApp {
 
 	public static void main(String[] args) {
 
-		Heap<String> list = new MinHeap<String>();
-				
-		String[] a = {"a", "b", "z", "f", "0", "c"};
+		UnionFind union = new UnionFind(8);
+
+		Integer[] a = {1,3,5,6,8,4,2,9};
 		String[] b = {"g", "s","t","o","q"};
+
+		System.out.println(Arrays.toString(union.rep));
+
+		union.union(0, 1);
 		
-		System.out.println(Arrays.toString(a));
+		System.out.println(Arrays.toString(union.rep));
 		
-		list.addFromArray(a);
-				
-				
-		System.out.println(Arrays.toString(list.toArray()));
-		
-		list.addFromArray(b);
-		
-		
-		System.out.println(Arrays.toString(list.toArray()));
-		
-//		list.extract();
-//		
-//		System.out.println(Arrays.toString(list.toArray()));
-//		
-//		DoublyLinkedList<Integer> other = new DoublyLinkedList<Integer>();
-//		
-//		other.addFromArray(b);
-		
-		
+		System.out.println(union.same(0, 1));
+		System.out.println(union.same(0, 2));
+
+		//		list.extract();
+		//		
+		//		System.out.println(Arrays.toString(list.toArray()));
+		//		
+		//		DoublyLinkedList<Integer> other = new DoublyLinkedList<Integer>();
+		//		
+		//		other.addFromArray(b);
+
+
 	}
 
 }
