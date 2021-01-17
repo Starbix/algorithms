@@ -27,10 +27,11 @@
 - Minimal Spanning Tree
   - Kruskal
 - Shortest Path
-
+  - Dijkstra
 ## Abstract Datastructures
 
 - Doubly Linked List
 - Queue
 - Stack
 - UnionFind
+

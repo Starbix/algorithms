@@ -22,9 +22,10 @@ public class Kruskal {
 	        }
 	    });
 		
+		
 		for (Edge e : G.edges ) {
-			if (!MST.same(e.u, e.v)) {
-				MST.union(e.u, e.v);
+			if (!MST.same(e.u.getKey(), e.v.getKey())) {
+				MST.union(e.u.getKey(), e.v.getKey());
 				//System.out.println(e.u+" and "+e.v+" : "+e.w);
 				mst += e.w;
 			}

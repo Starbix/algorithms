@@ -2,18 +2,23 @@ package graph;
 
 public class Edge implements Comparable<Edge> { 
 
-	public int u;   // vertex u of the edge 
-	public int v;   // vertex v of the edge
+	public Vertex u;   // vertex u of the edge 
+	public Vertex v;   // vertex v of the edge
 	public int w;   // the weight of the edge  
+	
+	boolean directed=true;
 
-	public Edge (int u, int v, int w) {
+	public Edge (Vertex u, Vertex v, int w) {
 		this.u = u;
 		this.v = v;      
 		this.w = w;
+		
+		u.out.add(this);
 	}
-	public Edge (int u, int v) {
+	public Edge (Vertex u, Vertex v) {
 		this.u = u;
-		this.v = v;      
+		this.v = v;    
+		u.out.add(this);
 	}
 	@Override
 	public int compareTo(Edge o) {
