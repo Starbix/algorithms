@@ -9,16 +9,14 @@ public class Edge implements Comparable<Edge> {
 	boolean directed=true;
 
 	public Edge (Vertex u, Vertex v, int w) {
-		this.u = u;
-		this.v = v;      
+		this(u,v);     
 		this.w = w;
-		
-		u.out.add(this);
-	}
+			}
 	public Edge (Vertex u, Vertex v) {
 		this.u = u;
 		this.v = v;    
 		u.out.add(this);
+		v.in.add(this);
 	}
 	@Override
 	public int compareTo(Edge o) {

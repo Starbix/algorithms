@@ -6,19 +6,20 @@ public class Vertex implements Comparable<Vertex> {
 
 	int key;
 	int dist;
+	ArrayList<Edge> in;
 	ArrayList<Edge> out;
 
 	static boolean compareWithDist = false;
 
 	public Vertex() {
+		in = new ArrayList<Edge>();
 		out = new ArrayList<Edge>();
 
 	}
 
 	public Vertex(int key) {
-
+		this();
 		this.key = key;
-		out = new ArrayList<Edge>();
 	}
 
 	public int getKey() {
@@ -44,10 +45,17 @@ public class Vertex implements Comparable<Vertex> {
 	@Override
 	public int compareTo(Vertex o) {
 		if (compareWithDist) {
-			return dist-o.getDist();
+			
+			if (dist>o.dist) return 1;
+			if (dist<o.dist) return -1;
+			return 0;
 		} else {
 			return key-o.getKey();
 		}
+	}
+	
+	public String toString() {
+		return "Vrtx "+key+": "+dist;
 	}
 
 }

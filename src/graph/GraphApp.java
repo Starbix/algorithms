@@ -21,14 +21,14 @@ public class GraphApp {
 		int[] v = {3,2,2,4,5,5,0,6,6};
 		int[] w = {1,2,5,2,2,1,7,3,6};
 		
-		for (int i=0;i<9;i++) {
+		for (int i=0;i<G.E;i++) {
 			G.edges[i] = new Edge(G.vertices[u[i]], G.vertices[v[i]], w[i]);
 		}
 		
 		
-		System.out.println(Kruskal.getMST(G));
+		System.out.println(Prim.getMST(G, G.vertices[1]));
 		
-		Dijkstra.shortestPath(G, G.vertices[1]);
+		BellmanFord.shortestPath(G, G.vertices[1]);
 		
 		System.out.println("Distance from 1:");
 		for (Vertex ver : G.vertices) {

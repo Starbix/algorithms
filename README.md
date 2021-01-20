@@ -26,6 +26,7 @@
 
 - Minimal Spanning Tree
   - Kruskal
+  - Prim
 - Shortest Path
   - Dijkstra
 ## Abstract Datastructures
