@@ -6,17 +6,18 @@ public class Dijkstra {
 
 	public Dijkstra() {	}
 
-	public static void shortestPath(Graph G, Vertex s) {
-
+	public static int[] shortestPath(Graph G, Vertex s) {
 		Vertex.compareWithDist=true;
 
+		int[] d =  new int[G.V];
 		Vertex[] parent = new Vertex[G.V];
-
 
 		for (Vertex v : G.vertices) {
 			parent[v.getKey()]=null;
 			v.dist = Integer.MAX_VALUE;
 		}
+		
+		d[s.key] = 0;
 		s.setDist(0);
 
 		//TODO: use own prioQueue
@@ -34,8 +35,10 @@ public class Dijkstra {
 					v.dist=u.getDist()+e.w;
 					parent[v.getKey()] = u;
 					queue.add(v);
+					d[v.key] = v.dist;
 				}
 			}
 		}
+		return d;
 	}
 }

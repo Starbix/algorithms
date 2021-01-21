@@ -27,12 +27,12 @@ public class GraphApp {
 
 		System.out.println(Prim.getMST(G, G.vertices[1]));
 
-		int[][] d = FloydWarshall.allPairShortestPath(G);
+		int[] d = BellmanFord.shortestPath(G, G.vertices[1]);
 
 		System.out.println("Distance matrix:");
-		for (int[] a : d) {
-			System.out.println(Arrays.toString(a));
-		}
+		//for (int[] a : d) {
+			System.out.println(Arrays.toString(d));
+		//}
 
 
 	}
