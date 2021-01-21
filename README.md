@@ -28,7 +28,11 @@
   - Kruskal
   - Prim
 - Shortest Path
-  - Dijkstra
+  - One-to-All
+    - Dijkstra
+  - All-to-All
+    - Floyd-Warshall
+
 ## Abstract Datastructures
 
 - Doubly Linked List
