@@ -11,13 +11,15 @@ public class BellmanFord {
 		for (Vertex v : G.vertices) {
 			parent[v.getKey()]=null;
 			v.dist = Integer.MAX_VALUE;
+			d[v.key] = v.dist;
 		}
-		
+
 		d[s.key]=0;
 		s.setDist(0);
 
 		for (int i=1;i<G.V;i++) {
 			for (Edge e :  G.edges) {
+				System.out.println("processing edge: "+e.w);
 				if (e.u.dist!=Integer.MAX_VALUE&&e.u.dist+e.w<e.v.dist) {
 					e.v.dist = e.u.dist+e.w;
 					d[e.v.key] = e.v.dist;
@@ -27,7 +29,7 @@ public class BellmanFord {
 		}
 
 		for (Edge e :  G.edges) {
-			if (e.u.dist+e.w<e.v.dist) {
+			if (e.u.dist!=Integer.MAX_VALUE&&e.u.dist+e.w<e.v.dist) {
 				throw new IllegalArgumentException("Negative Cycle detected");
 			}
 		}
