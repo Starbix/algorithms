@@ -2,10 +2,10 @@ package graph;
 
 public class Graph{
 
-	public int V;       // number of vertices in the graph
-	public int E;      // number of edges  in the graph
-	public Edge[] edges;  // each edge in the graph
-	public Vertex[] vertices;
+	public int V;				// number of vertices in the graph
+	public int E;				// number of edges  in the graph
+	public Vertex[] vertices;	// array of vertices
+	public Edge[] edges;		// array of edges
 
 	public Graph(int V, int E) {
 		this.V     = V;

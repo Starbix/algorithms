@@ -25,6 +25,7 @@
 ### Graph Algorithms
 
 - Minimal Spanning Tree
+  - Borůvka
   - Kruskal
   - Prim
 - Shortest Path

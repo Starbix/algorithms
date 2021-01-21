@@ -1,12 +1,14 @@
 package datastructures;
 
+import graph.Vertex;
+
 public class UnionFind {
 
 	int[] rank;
 	int[] rep;
 
 	int n;
-	
+
 	int components;
 
 	//FAST: same and union in O(logN)
@@ -14,10 +16,7 @@ public class UnionFind {
 	final boolean FAST;
 
 	public UnionFind(int n) {
-		this.FAST = true;
-		this.n = n;
-		this.components = n;
-		make(n);
+		this(n, true);
 	}
 
 	public UnionFind(int n, boolean fast) {
@@ -25,6 +24,10 @@ public class UnionFind {
 		this.n = n;
 		this.components = n;
 		make(n);
+	}
+
+	public int getComponents() {
+		return components;
 	}
 
 	void make(int n) {
@@ -46,6 +49,10 @@ public class UnionFind {
 		return rep[x]==rep[y];
 	}
 
+	public boolean same(Vertex u, Vertex v) {
+		return same(u.getKey(), v.getKey());
+	}
+
 	public int find(int x) {
 		if (!FAST) return rep[x];
 		if (rep[x]!=x) {
@@ -60,7 +67,7 @@ public class UnionFind {
 			int vRoot = find(v);
 
 			if (uRoot!=vRoot) components--;
-			
+
 			if (rank[uRoot]<rank[vRoot]) {
 				rep[uRoot] = vRoot;
 			} else if (rank[uRoot]>rank[vRoot]) {
@@ -72,7 +79,7 @@ public class UnionFind {
 		} else {
 
 			if (rep[u]!=rep[v]) components--;
-			
+
 			int r = rep[u];
 			for (int i=0;i<n;i++) {
 				if (rep[i]==r) {
@@ -80,7 +87,9 @@ public class UnionFind {
 				}
 			}
 		}
-		
-		
 	}
+
+	public void union(Vertex u, Vertex v) {
+		union(u.getKey(), v.getKey());
+	}	
 }
