@@ -45,7 +45,7 @@ public class Vertex implements Comparable<Vertex> {
 	@Override
 	public int compareTo(Vertex o) {
 		if (compareWithDist) {
-			
+
 			if (dist>o.dist) return 1;
 			if (dist<o.dist) return -1;
 			return 0;
@@ -53,7 +53,7 @@ public class Vertex implements Comparable<Vertex> {
 			return key-o.getKey();
 		}
 	}
-	
+
 	public String toString() {
 		return "Vrtx "+key+": "+dist;
 	}

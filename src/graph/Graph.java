@@ -12,7 +12,7 @@ public class Graph{
 		this.E     = E;
 		this.edges   = new Edge[E];
 		this.vertices = new Vertex[V];
-		
+
 		for (int i=0;i<V;i++) {
 			vertices[i] = new Vertex(i);
 		}

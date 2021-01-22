@@ -7,10 +7,16 @@ import datastructures.UnionFind;
 
 public class Prim {
 
+	static boolean DEBUG = false;
+
 	public Prim() {	}
 
 	public static long getMST(Graph G, Vertex s){
 		Vertex.compareWithDist=true;
+
+		//edge cases
+		if (G.V==0) return 0;
+		if (s==null) throw new IllegalArgumentException("starting vertex can't be null");
 
 		UnionFind MST = new UnionFind(G.V);
 		long mst=0;
@@ -30,7 +36,7 @@ public class Prim {
 			Vertex v = queue.remove();
 			MST.union(s.getKey(), v.getKey());
 
-			System.out.println("Adding: "+v.key+" w: "+v.dist);
+			if(DEBUG) System.out.println("Adding: "+v.key+" w: "+v.dist);
 			mst += v.dist;
 
 			for (Edge e : v.out) {
@@ -40,8 +46,6 @@ public class Prim {
 						queue.remove(e.v);
 						queue.add(e.v);
 					}
-
-
 				}
 			}
 
@@ -52,12 +56,10 @@ public class Prim {
 						queue.remove(e.u);
 						queue.add(e.u);
 					}
-
-
 				}
 			}
 
-			System.out.println(Arrays.toString(queue.toArray()));
+			if(DEBUG) System.out.println(Arrays.toString(queue.toArray()));
 		}
 		return mst;
 	}

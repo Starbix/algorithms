@@ -5,9 +5,9 @@ import java.util.Iterator;
 public class ListIterator<T> implements Iterator<T> {
 
 	DoublyLinkedList<T> list;
-	
+
 	Node<T> node;
-	
+
 	public ListIterator(DoublyLinkedList<T> list) {
 		this.list = list;
 		node = list.getNode(0);
@@ -21,7 +21,7 @@ public class ListIterator<T> implements Iterator<T> {
 	@Override
 	public T next() {
 		Node<T> tmp = node;
-		
+
 		node = node.getNext();
 		return tmp.getKey();
 	}

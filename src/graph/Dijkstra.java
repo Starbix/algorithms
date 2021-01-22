@@ -16,7 +16,7 @@ public class Dijkstra {
 			parent[v.getKey()]=null;
 			v.dist = Integer.MAX_VALUE;
 		}
-		
+
 		d[s.key] = 0;
 		s.setDist(0);
 

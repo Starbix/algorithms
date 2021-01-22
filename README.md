@@ -30,7 +30,9 @@
   - Prim
 - Shortest Path
   - One-to-All
+    - Breadth First Search
     - Dijkstra
+    - Bellman-Ford
   - All-to-All
     - Floyd-Warshall
 

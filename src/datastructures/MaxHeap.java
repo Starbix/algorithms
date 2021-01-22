@@ -8,5 +8,5 @@ public class MaxHeap<T extends Comparable<? super T>> extends Heap<T> {
 		int c = compare(i, j);
 		return c<0;
 	}
-	
+
 }
