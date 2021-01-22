@@ -2,6 +2,9 @@ package graph;
 
 public class FloydWarshall {
 
+	//treat edges as directed
+	public static boolean directed = true;
+	
 	public FloydWarshall() {	}
 
 	public static int[][] allPairShortestPath(Graph G) {
@@ -20,7 +23,10 @@ public class FloydWarshall {
 
 		//base cases: adjacent vertices have a non-infinity distance
 		for (Edge e: G.edges) {
-			if (e.u.key!=e.v.key) d[e.u.key][e.v.key] = e.w;
+			if (e.u.key!=e.v.key) {
+				d[e.u.key][e.v.key] = e.w;
+				if (!directed) d[e.v.key][e.u.key] = e.w;
+			}
 		}
 
 		//allowed to use vertices

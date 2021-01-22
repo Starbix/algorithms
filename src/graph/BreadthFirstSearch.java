@@ -4,13 +4,19 @@ import datastructures.Queue;
 
 public class BreadthFirstSearch {
 
+	//treat edges as directed
+	public static boolean directed = true;
+
 	public BreadthFirstSearch() {	}
 
 	public static int[] shortestPath(Graph G, Vertex s) {
-		//treat edges as directed
-		boolean directed = true;
+		//reset edge weights
+		G.resetVertexDists();
 
 		int[] d =  new int[G.V];
+		for (int i=0;i<G.V;i++) {
+			d[i]=Integer.MAX_VALUE;
+		}
 
 		Queue<Vertex> queue = new Queue<Vertex>();
 		Vertex[] parent = new Vertex[G.V];
@@ -40,6 +46,16 @@ public class BreadthFirstSearch {
 				}
 			}
 		}
+		return d;
+	}
+
+	public static int[][] allPairShortestPath(Graph G) {
+		int[][] d = new int[G.V][G.V];
+
+		for (Vertex v : G.vertices) {
+			d[v.getKey()] = shortestPath(G, v);
+		}
+
 		return d;
 	}
 }

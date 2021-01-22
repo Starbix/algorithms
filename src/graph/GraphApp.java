@@ -10,7 +10,6 @@ public class GraphApp {
 
 		Graph G = new Graph(7, 9);
 
-
 		//add vertices and edges		
 		int[] u = {1,1,3,3,2,4,4,4,0};
 		int[] v = {3,2,2,4,5,5,0,6,6};
@@ -25,14 +24,11 @@ public class GraphApp {
 
 		System.out.println(Boruvka.getMST(G));
 
-		int[] d = BreadthFirstSearch.shortestPath(G, G.vertices[1]);
+		int[][] d = Dijkstra.allPairShortestPath(G);
 
 		System.out.println("Distance matrix:");
-		//for (int[] a : d) {
-		System.out.println(Arrays.toString(d));
-		//}
-
-
+		for (int[] a : d) {
+			System.out.println(Arrays.toString(a));
+		}
 	}
-
 }

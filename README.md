@@ -34,6 +34,8 @@
     - Dijkstra
     - Bellman-Ford
   - All-to-All
+    - n×BFS
+    - n×Dijkstra
     - Floyd-Warshall
 
 ## Abstract Datastructures

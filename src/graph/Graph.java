@@ -17,5 +17,11 @@ public class Graph{
 			vertices[i] = new Vertex(i);
 		}
 	}
+	
+	public void resetVertexDists() {
+		for (Vertex v : vertices) {
+			v.dist = 0;
+		}
+	}
 
 }
