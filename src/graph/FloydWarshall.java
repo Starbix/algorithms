@@ -39,6 +39,11 @@ public class FloydWarshall {
 				}
 			}
 		}
+		
+		for (int i=0;i<G.V;i++) {
+			if (d[i][i]!=0) throw new IllegalArgumentException("Negative Cycle detected");
+		}
+		
 		return d;
 	}
 }
