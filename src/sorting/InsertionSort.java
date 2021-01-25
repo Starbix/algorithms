@@ -1,6 +1,6 @@
 package sorting;
 
-public class InsertionSort implements Sortable {
+public class InsertionSort {
 
 	static boolean DEBUG = false;
 	

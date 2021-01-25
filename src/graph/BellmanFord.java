@@ -8,6 +8,8 @@ public class BellmanFord {
 		int[] d =  new int[G.V];
 		Vertex[] parent = new Vertex[G.V];
 
+		G.resetVertexDists();
+		
 		for (Vertex v : G.vertices) {
 			parent[v.getKey()]=null;
 			v.dist = Integer.MAX_VALUE;

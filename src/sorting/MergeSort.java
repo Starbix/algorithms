@@ -1,6 +1,6 @@
 package sorting;
 
-public class MergeSort implements Sortable {
+public class MergeSort {
 
 	
 	public static void sort(int[] arr) {

@@ -1,6 +1,6 @@
 package sorting;
 
-public class BubbleSort implements Sortable {
+public class BubbleSort {
 
 	public static void sort(int[] arr) {
 		 

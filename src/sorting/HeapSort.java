@@ -1,6 +1,6 @@
 package sorting;
 
-public class HeapSort implements Sortable {
+public class HeapSort {
 
 
 	public static void sort(int[] arr) {
