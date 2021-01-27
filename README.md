@@ -38,6 +38,13 @@
     - n×Dijkstra
     - Floyd-Warshall
 
+### Dynamic Programming
+
+- Longest Ascending Subsequence
+- Longest Common Subsequence
+- SubsetSum
+- KnapSack
+
 ## Abstract Datastructures
 
 - Doubly Linked List
