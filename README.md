@@ -44,7 +44,7 @@
 - Longest Common Subsequence
 - SubsetSum
 - KnapSack
-
+- Optimal Cost
 ## Abstract Datastructures
 
 - Doubly Linked List

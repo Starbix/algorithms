@@ -29,6 +29,13 @@ public class DPApp {
 		
 		System.out.println(KnapSack.knapSack(w, v, 15));
 		
+		
+		//HS16
+		int[] cost = {6,8,3,15,5,6,4,7,5};
+		int[] coord = {0,2,4,10,13,15,18,20,22};
+		
+		System.out.println(OptimalCost.cellPhoneMasts(cost, coord, 22, 2));
+		
 	}
 
 }

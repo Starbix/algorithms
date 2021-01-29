@@ -11,7 +11,6 @@ public class KnapSack {
 
 		int[][] dp = new int[n+1][W+1];
 
-
 		for (int i=1;i<=n;i++) {
 			for (int w=1;w<=W;w++) {
 				if (w>=weight[i-1]) {

@@ -59,14 +59,10 @@ public abstract class Heap<T extends Comparable<? super T>> {
 
 	}
 
+	protected abstract boolean isInWrongOrder(int m, int r);
+
 	int compare(int i, int j) {		
 		return list.get(i).compareTo(list.get(j));
-	}
-
-	//Heap is maxHeap by default
-	protected boolean isInWrongOrder(int i, int j) {
-		int c = compare(i, j);
-		return c<0;
 	}
 
 	private void swap(int i, int j) {
