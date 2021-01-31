@@ -19,10 +19,15 @@ public class DPApp {
 		
 		System.out.println(MED.minimalEditingDistance("TIGER", "ZIEGE"));
 
+		System.out.println();
+		System.out.println();
 		
 		System.out.println(SubsetSum.subsetSum(new int[] {1,3}, 2));
 		
-		System.out.println(SubsetSum.subsetSum(new int[] {1,3,1,4}, 3));
+		System.out.println(SubsetSum.subsetSum(new int[] {1,1,1,2,1,3}, 3));
+		
+		System.out.println();
+		System.out.println();
 		
 		int[] v = {1,3,4,2,8};
 		int[] w = {2,4,1,1,99};

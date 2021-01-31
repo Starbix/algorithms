@@ -1,5 +1,6 @@
 package dynamicprogramming;
 
+import java.util.Arrays;
 
 public class SubsetSum {
 
@@ -45,7 +46,6 @@ public class SubsetSum {
 		return dp[n][z];
 	}
 
-	//doesn't work
 	public static boolean subsetSumThree(int[] A) {
 		int z=0;
 		for (int i : A) {
@@ -53,17 +53,23 @@ public class SubsetSum {
 		}
 
 		z /= 3;
-		
+
 		int n = A.length;
 		boolean[][][] dp = new boolean[n+1][z+1][z+1];
 
 		dp[0][0][0] = true;
 
 		for (int k=1;k<=n;k++) {
-			for (int s=1;s<=z;s++) {
-				for (int t=1;t<=z;t++) {
-					if (A[k-1]<=s&&A[k-1]<=t) {
-						dp[k][s][t] = dp[k-1][s][t] || dp[k-1] [s-A[k-1]] [t-A[k-1]];
+			int num = A[k-1];
+
+			for (int s=0;s<=z;s++) {
+				for (int t=0;t<=z;t++) {
+					if (num<=s&&num<=t) {
+						dp[k][s][t] = dp[k-1][s][t] || dp[k-1] [s] [t-num] || dp[k-1] [s-num] [t];
+					} else if (num<=s) {
+						dp[k][s][t] = dp[k-1][s][t] || dp[k-1] [s-num] [t];
+					} else if (num<=t) {
+						dp[k][s][t] = dp[k-1][s][t] || dp[k-1] [s] [t-num];
 					} else {
 						dp[k][s][t] = dp[k-1][s][t];
 					}
@@ -73,5 +79,4 @@ public class SubsetSum {
 
 		return dp[n][z][z];
 	}
-
 }
