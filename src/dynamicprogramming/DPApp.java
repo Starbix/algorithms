@@ -36,6 +36,10 @@ public class DPApp {
 		
 		System.out.println(OptimalCost.cellPhoneMasts(cost, coord, 22, 2));
 		
+		String s = "aabb";
+		String[] dict = {"a", "abb"};
+		System.out.println(StringSplitter.stringSplitter(s, dict));
+		
 	}
 
 }

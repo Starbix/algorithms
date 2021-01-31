@@ -29,7 +29,7 @@ public class FloydWarshall {
 			}
 		}
 
-		//allowed to use vertices
+		//allowed to use vertices 0..i as intermediary vertices
 		for (int i=0;i<G.V;i++) {
 			for (int u=0;u<G.V;u++) {
 				for (int v=0;v<G.V;v++) {

@@ -45,6 +45,8 @@
 - SubsetSum
 - KnapSack
 - Optimal Cost
+- String Splitter
+
 ## Abstract Datastructures
 
 - Doubly Linked List
