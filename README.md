@@ -46,6 +46,7 @@
 - KnapSack
 - Optimal Cost
 - String Splitter
+- Maximize Expression
 
 ## Abstract Datastructures
 

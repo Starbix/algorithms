@@ -17,7 +17,7 @@ public class DPApp {
 		
 		System.out.println(LGT.longestCommonSubsequence("TIGER", "TIGRA"));
 		
-		System.out.println(MED.minimalEditingDistance("TIGER", "ZIEGER"));
+		System.out.println(MED.minimalEditingDistance("TIGER", "ZIEGE"));
 
 		
 		System.out.println(SubsetSum.subsetSum(new int[] {1,3}, 2));
@@ -34,11 +34,17 @@ public class DPApp {
 		int[] cost = {6,8,3,15,5,6,4,7,5};
 		int[] coord = {0,2,4,10,13,15,18,20,22};
 		
-		System.out.println(OptimalCost.cellPhoneMasts(cost, coord, 22, 2));
+		System.out.println(OptimalCost.cellPhoneMasts(cost, coord, 22, 3));
 		
 		String s = "aabb";
 		String[] dict = {"a", "abb"};
 		System.out.println(StringSplitter.stringSplitter(s, dict));
+		
+		
+		int[] operand = {9, -9, 3, -8, -3, 4, -4, -2, 2, 4};
+		char[] ops = {'+','*','+','+','+','+','+','+','*'};
+		
+		System.out.println(MaximizeExpression.maximizeExpression(operand, ops));
 		
 	}
 
