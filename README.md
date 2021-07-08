@@ -55,3 +55,13 @@
 - Stack
 - UnionFind
 
+# Parallel Algorithms and Datastructures
+
+## Locks
+- Peterson's algorithm
+- Filter Lock
+- Bakery Lock
+- Reader/Writer Lock
+  - Writer-priority
+  - "Fair"
+- Semaphore
